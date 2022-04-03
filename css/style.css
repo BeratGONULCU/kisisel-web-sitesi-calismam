@@ -1,0 +1,226 @@
+*{
+ box-sizing: border-box;/* sayfamıza pedding ve border gibi değerler eklendiğinde içerklerimizin genişlemesini önleme amaçlı baştan bunu yazarız. "*" 'da hepsini etkileyeceği için kullanılır.*/
+    
+}
+
+body
+    {
+     font-family: 'Hubballi', cursive;/*yazı tipini googlefonts sitesinden seçip ilk önce html kısmına linki sonra da yazı stilini css kısmına yazdık. ve eğer ki fontta bir hata olursa 'cursive' fontunu kullanıcak.*/
+    
+    margin: 0;  /*margin 0 en üst sol köşedeki boşlukları kapatır ve yazıları sol üste dayar.*/
+    }
+
+#menu
+    {
+    width: 100vw;
+    height: 15vh;
+    /*background-color:darkcyan;*/
+    padding: 5px 20px;/*5 pixel aşağıdan ve yukarıdan boşluk bırakıldı ve 20 pixel sağ soldan boşluk bırakıldı.*/
+    }
+
+#logo
+    {  
+    font-size:2.5vw;
+    line-height: 14vh;/*logo menu kısmının ortasına getirildi.*/
+    color:#000000;
+    float:left;   
+    } 
+/*logo kısmında "berat gönülcü" yazısının boyutu,yazının yukarıdan uzaklığı ve rengi ayarlandı,float:left kısmıyla da menü kısmının alt bölümleri balığın yanına taşındı.*/
+
+nav
+    {/*menüde kısımları yaptığımız bölümdeki yazıları ayarlamak için kullandık.*/
+    float: right;/*menüdeki yazıları sağa kaydırdık.*/
+    line-height: 100px;
+    
+    }
+
+nav a:link
+    {/*standart halinde yani tıklanmamış halindeki özellikleri bu kısımda tanımlarız.*/
+    text-decoration: none;/*alttaki çizgileri kaldırdık.*/
+    margin-right: 25px;/*sağdan 25 pixel sola çekildi ve aralarında boşluk bırakıldı.*/
+    color:#003666;
+    }
+
+nav a:hover
+    {/*üzerine gelip tıklanmadığında ne yapıcak belirlenir.*/
+    border-bottom: 2px solid #003666;
+    }
+
+    
+nav a:visited  /*üzerine gelme durumunda ne yapılacağı yazılır.*/
+    {
+    text-decoration: none;
+    margin-right: 25px;
+    color:#003666;
+    }
+
+.ikon
+    {
+    margin-right: 7px;
+    font-size: 16px;
+    }
+/*hakkımda kısmıyla hakkımdanın logosunun arasına boşluk bıraktı. */
+
+#anasayfa
+    {
+    width: 100vw;    
+    height: 70vh;
+    background: url("../img/images/bandirmasahil.png") center center no-repeat;
+    background-size: cover;
+    background-position: center;
+   /* background-attachment: fixed; --> arka plan resmini sabit bırakmaz yani aşağı indikçe resimde aşağı iner*/
+    }
+
+/*html kısmında hazırladığımız arka planı bu kısımda tasarladık.*/
+
+#black
+    {
+    height: 500px;
+    background-color: black;
+    opacity: 0.0;
+    
+    }
+
+#içerik{
+    position: absolute;
+    top:30%;
+    left:20%;
+    transform: translate(-100% ,-80%);
+    color: black;
+    font-size: 20px;
+}
+/*içerik kısmında yazılanları resim üzerinde konumlandırdık.*/
+
+#bosdiv{
+    min-width: 100vw;
+    min-width: 40vh ;
+    background-color: #354565;
+
+}
+
+#hakkimda{
+    height:150px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(240,248,255);
+    text-align:center;
+    text-decoration: solid;
+    /*text-transform: capitalize; --> her kelimenin baş harfi büyük olur.*/
+
+}
+
+#hakkimdaresim{
+    width :100vw;
+    height: 75vh;
+    text-align: center;
+    background: url("../img/images/cde2.png") center center no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*mobile
+@media(max-width:500px){
+    #hakkimdaresim {
+        background-image: url("../img/images/DSC05289.JPG");
+        width: 100%;
+
+    }
+}
+*/
+
+.veri{
+    width:12vw;
+    height:3vh;
+    border: 2px solid #003666;
+    text-align: center;
+    margin: 5px;
+    
+}
+
+
+#form1{
+    text-align: center;
+}
+
+#resim{
+    width: 50vw;
+    height: 60vh;
+}
+
+#button{
+    width: 5vw;
+    height: 3vh;
+}
+/*-------şehrim.html dosyası css kısmı------- */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.box
+{
+    height: 40vh;
+    text-align: center ;
+    width: 20vw;
+    border: 1.5px solid black;
+    background-color: #f1f1f1;
+  
+    
+    
+}
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;   /*flex-wrap. Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz. */
+    background-color: #f1f1f1;
+    
+}
+
+.container .box1 {
+    border-radius: 3rem;
+    background: #999;
+    
+}
+
+
+.b3{
+    order: 3;
+}
+.b2{
+    order: 2;
+    /*flex-grow: 1;  -->bu özellik kalan boşlukların tamamına box2 'yi doldurur.*/
+
+}
+.b1{
+    order: 1;
+    
+}
+
+/*eğitim.html dosyası css kısmı*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*margin padding gibi değerlerin verilen değerleri nereye göre ayarlanacağını gösteririz.*/
+}
+
+.boxresim{
+    width: 19.9vw;
+    height: 20vh;
+}
+/*aileağacı.html  css kısmı*/
+
+
+
+
+
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
