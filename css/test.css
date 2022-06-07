@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=IBM+Plex+Sans+Arabic:wght@200;300&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
+body {
+    font-family: open Sans,sans-serif;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul#menu {
+    background: #16a085; 
+    height: 50px;
+}
+
+
+
+#button,#gizliyazi {
+    color:#0000aa;
+}
+
+ul#menu >li {
+    float: left;
+    position: relative;
+}
+
+ul#menu >li >a {
+    display: block;
+    font-size: 14px;
+    color:#000;
+    padding: 0 15px;
+    line-height: 50px;
+    border-right: 1px solid rgba(0, 0,0, .1);
+
+}
+
+ul#menu ul {
+    background: #16a085;
+    width: 150px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    opacity: 0;  /*hover kısmında görünür yapıcaz*/ 
+    transition: 250ms all; /*bütün özellikler için çeyrek saniye sürer çalışması*/
+    visibility: hidden; /*üstüne gelmeden açıldığı için saklanması için yazıldı*/
+}
+
+ul#menu ul li {
+    position: relative;/*alt menünün altında menü olursa doğru yerde açılması için*/
+}
+
+ul#menu ul li a {
+    display: block;
+    padding: 7px 12px;
+    color: #000;
+    font-size: 14px;
+} 
+
+ul#menu > li:hover> ul { /*ilk dropdown menüsünü açmak için kullanılır.*/
+    display: block;
+    opacity: 1;
+    visibility: visible; /*hidden olan kısım üzerine geldiğinde görünür hale getirildi.*/
+    top:50px;
+} 
+
+ul#menu > li ul ul { /*1 den fazla iç içe menü varsa işimize yarar.*/
+    top:0;
+    left: 200px;
+}
+
+ul#menu li ul li :hover > ul {
+    opacity: 1;
+    visibility: visible;
+}

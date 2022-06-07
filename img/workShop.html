@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Encrypt-It!</title>
+    <link rel="stylesheet" href="../css/encrypted-style.css">
+  </head>
+
+  <script src="../javascript/encrypted.js"></script>
+  <script src="../javascript/randomize.js"></script>
+  <script src="../javascript/workShop.js"></script>
+
+  <body>
+    <header>
+      <h1>Encrypt-It!</h1>
+      <h2>Translate any text message into a super-secret cipher!</h2>
+    </header>
+    <main>
+      <fieldset>
+        <legend>Text to Encrypt</legend>
+       <div class="container" style="font-size: 10px">
+        <textarea class="container"  id="input-text" rows="10" cols="20"  placeholder="Enter your message to encrypted here"></textarea>
+    </div>
+      </fieldset>
+      <a href="../img/index.html" id="geri">anasayfa</a>
+      <fieldset>
+        <legend>Encrypt Options</legend>
+
+        <p>
+          <strong>Cipher Type: </strong>
+          <select id="cipher-type">
+            <option value="shift">Shift Cipher</option>
+            <option value="random">Randomized</option>
+          </select>
+        </p>
+
+        <p>
+          <strong>Font Size: </strong>
+          <label>
+            <input id="12pt" checked type="radio" name="text-size" value="12pt">12pt</input>
+          </label>
+          <label>
+            <input id="24pt" type="radio" name="text-size" value="24pt">24pt</input>
+          </label>
+        </p>
+        
+        <p>
+          <label>
+            <strong>All-Caps:</strong>
+            <input id="all-caps" type="checkbox" name="uppercase-ouput" value="uppercase"/>
+          </label>
+        </p>
+
+        <button id="encrypt-it">Encrypt It!</button> <!--burası-->
+        <button id="reset">Reset</button>
+      </fieldset>
+
+      <div id="result-area">
+        <h2>Result:</h2>
+        <p id="result"></textarea>
+      </div>
+    </main>
+  </body>
+
+  
+</html>

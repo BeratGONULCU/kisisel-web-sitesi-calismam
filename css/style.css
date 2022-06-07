@@ -65,7 +65,7 @@ nav a:visited  /*üzerine gelme durumunda ne yapılacağı yazılır.*/
     {
     width: 100vw;    
     height: 70vh;
-    background: url("../img/images/bandirmasahil.png") center center no-repeat;
+    background: url("../images/bandirmasahil.png") center center no-repeat;
     background-size: cover;
     background-position: center;
    /* background-attachment: fixed; --> arka plan resmini sabit bırakmaz yani aşağı indikçe resimde aşağı iner*/
@@ -113,7 +113,7 @@ nav a:visited  /*üzerine gelme durumunda ne yapılacağı yazılır.*/
     width :100vw;
     height: 75vh;
     text-align: center;
-    background: url("../img/images/cde2.png") center center no-repeat;
+    background: url("../images/cde\ -\ Kopya.png") center center no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -218,9 +218,24 @@ nav a:visited  /*üzerine gelme durumunda ne yapılacağı yazılır.*/
 
 
 
-footer{
+footer {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: flex-end;
+}
+
+/*workShop.html kısmı */
+
+a {
+    text-decoration: none;
+}
+
+#geri {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    text-decoration: none;
+    flex-direction: column;
+
 }
