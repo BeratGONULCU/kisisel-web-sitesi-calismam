@@ -55,6 +55,7 @@
             <div >
                 <!-- <span>L</span> css ile müdahele yapabilmek için span kullanıldı.-->
                 <p >2001 kasım ayında sakarya'nın budaklar köyünde dünyaya geldim.ilköğretimimi sabihahanım ilkokulunda tamamladım.ortaöğretimime başlarken 5.sınıfı izmitte ulugazi okulunda okudum.6.sınıf ile beraber tekrar sakarya'ya geri geldim ve geri kalan hayatıma burada devam ettim..
+                
                 </p>
             </div>
 
@@ -70,10 +71,56 @@
 
 
     </section>
+
+    <button onclick="yazsin()">yazdır</button>
+
+    <section>
+    <p id="deneme"></p>
     
-   
+    </section>
  
 
 
 </body>
+
+<script>
+
+    var i = 0;
+    let txt = '2001 kasım ayında sakaryanın budaklar köyünde dünyaya geldim.ilköğretimimi sabihahanım ilkokulunda tamamladım.ortaöğretimime başlarken 5.sınıfı izmitte ulugazi okulunda okudum.6.sınıf ile beraber tekrar sakaryaya geri geldim ve geri kalan hayatıma burada devam ettim..'
+    txt = txt.toUpperCase();
+    let speed = 100;
+    var degisken;
+    var array = [];
+
+    function yazsin(){
+        if(i<txt.length){
+            if(txt.charAt(i) !== ' '){
+                /*document.getElementById("deneme").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(yazsin,speed);
+                */
+                
+                degisken += txt.charAt(i);
+                i++; 
+                array.push(degisken);
+                
+            }
+            
+            else {
+                /*
+                document.getElementById("deneme").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(yazsin,speed);*/
+
+            }
+            degisken = ' ';
+            for(var j=0;j<array.length;j++){
+            var mesaj =array.toString();
+            document.getElementById("deneme").innerHTML = mesaj;
+            }
+        }
+    }
+
+
+</script>
 </html>

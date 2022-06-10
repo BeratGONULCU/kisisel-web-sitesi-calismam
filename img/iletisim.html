@@ -59,16 +59,16 @@
 
         resim tuşu
         <br>
-        <img id="resim" src="../img/images/1280px-F-15,_71st_Fighter_Squadron,_in_flight.jpg" alt="pokeball">
+        <div id="resim">
+        <img id="resim" src="../images/1280px-F-15,_71st_Fighter_Squadron,_in_flight - Kopya - Kopya.jpg" >
+        </div>
         <br>
-        <button id="button" class="veri">resmi aç</button>
+        <button onclick="changePhoto()" id="button" class="veri">resmi değiştir</button>
 
-
-        <button id="btn" >arttır</button>
-        <div id="sayi">0</div>
         </form>
 
         <script>
+            /*
             var button=document.querySelector('#btn');
             var sayi = document.querySelector('#sayi');
 
@@ -77,7 +77,12 @@
                 var num = number(sayi.innerHTML);
                 sayi.innerHTML=++num;
 
-}   
+}  
+*/ 
+
+function changePhoto(){
+        document.getElementById("resim").src = "../images/su35.jpg";
+    }
         </script>
  
 </body>
